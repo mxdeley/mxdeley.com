@@ -1,158 +1,73 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-
-export default function TimelineEvent() {
+export default function Timeline() {
   return (
-    <div className="overflow-auto h-full w-full max-w-3xl mx-auto">
-      <div className="relative flex flex-col space-y-6 py-6">
-        {/* 1 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="relative">
-            <div className="absolute -left-1.5 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700" />
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@johndoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>DM</AvatarFallback>
-            </Avatar>
-          </div>
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Born</h4>
-                {/* <Badge className="mt-2">Important</Badge> */}
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  I was born on the 1st October 1999 in Derby, England
+    <div className="p-8">
+      <div className="flex flex-col items-center">
+        <div className="text-stone-50 text-2xl font-bold mb-8">Timeline</div>
+        <div className="flex flex-col items-center relative">
+          <div className="absolute h-full border-l-2 border-fuchsia-700" />
+          {/* One */}
+          <div className="flex flex-row justify-between w-full mb-10">
+            <div className="w-1/2 pr-4">
+              <div className="bg-stone-900 p-4 rounded-md shadow-md text-right">
+                <div className="text-fuchsia-700 text-sm mb-2">1999</div>
+                <div className="text-white font-semibold text-lg mb-2">
+                  Born at Derby Hospital
+                </div>
+                <p className="text-stone-300 text-sm">
+                  Started my journey in the world of technology at XYZ
+                  University, pursuing a degree in Computer Science.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+            <div className="w-1/2 pl-4" />
           </div>
-        </div>
-        {/* 2 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Event 2</h4>
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  This is another description of the event.
+          {/* Two */}
+          <div className="flex flex-row justify-between w-full mb-10">
+            <div className="w-1/2 pr-4" />
+            <div className="w-1/2 pl-4">
+              <div className="bg-stone-900 p-4 rounded-md shadow-md">
+                <div className="text-fuchsia-700 text-sm mb-2">2004</div>
+                <div className="text-stone-50 font-semibold text-lg mb-2">
+                  Joined Primary School
+                </div>
+                <p className="text-stone-300 text-sm">
+                  Completed a summer internship at ABC Corporation, where I
+                  worked on web development projects.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
-          <div className="relative">
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@janedoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
-          </div>
-        </div>
-        {/* 1 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="relative">
-            <div className="absolute -left-1.5 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700" />
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@johndoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>DM</AvatarFallback>
-            </Avatar>
-          </div>
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Born</h4>
-                {/* <Badge className="mt-2">Important</Badge> */}
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  I was born on the 1st October 1999 in Derby, England
+          {/* Three */}
+          <div className="flex flex-row justify-between w-full mb-10">
+            <div className="w-1/2 pr-4">
+              <div className="bg-stone-900 p-4 rounded-md shadow-md text-right">
+                <div className="text-fuchsia-700 text-sm mb-2">2011</div>
+                <div className="text-white font-semibold text-lg mb-2">
+                  Joined Secondary School
+                </div>
+                <p className="text-stone-300 text-sm">
+                  Started my journey in the world of technology at XYZ
+                  University, pursuing a degree in Computer Science.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+            <div className="w-1/2 pl-4" />
           </div>
-        </div>
-        {/* 2 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Event 2</h4>
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  This is another description of the event.
+          {/* Four */}
+          <div className="flex flex-row justify-between w-full mb-10">
+            <div className="w-1/2 pr-4" />
+            <div className="w-1/2 pl-4">
+              <div className="bg-stone-900 p-4 rounded-md shadow-md">
+                <div className="text-fuchsia-700 text-sm mb-2">2016</div>
+                <div className="text-stone-50 font-semibold text-lg mb-2">
+                  First Internship
+                </div>
+                <p className="text-stone-300 text-sm">
+                  Completed a summer internship at ABC Corporation, where I
+                  worked on web development projects.
                 </p>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="relative">
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@janedoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
-          </div>
-        </div>
-        {/* 1 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="relative">
-            <div className="absolute -left-1.5 top-0 h-full w-0.5 bg-gray-300 dark:bg-gray-700" />
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@johndoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>DM</AvatarFallback>
-            </Avatar>
-          </div>
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Born</h4>
-                {/* <Badge className="mt-2">Important</Badge> */}
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  I was born on the 1st October 1999 in Derby, England
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-        {/* 2 */}
-        <div className="flex items-start space-x-3 text-sm">
-          <div className="min-w-0 flex-1">
-            <Card className="rounded-lg shadow-lg">
-              <CardHeader className="p-4">
-                <h4 className="font-medium">Event 2</h4>
-              </CardHeader>
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  This is another description of the event.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="relative">
-            <Avatar className="relative z-10 w-8 h-8">
-              <AvatarImage
-                alt="@janedoe"
-                src="https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"
-              />
-              <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
+              </div>
+            </div>
           </div>
         </div>
       </div>

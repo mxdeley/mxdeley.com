@@ -16,6 +16,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "./ui/button"
+import { ModeToggle } from "./Theme-Toggle"
 
 
 const NavLinks = [
@@ -50,9 +51,7 @@ export default function VerticalHeader() {
         );
       })}
        <li className="flex justify-end">
-           {/* <Link  href="#">
-           
-           </Link> */}
+    
            <Dialog>
       <DialogTrigger asChild>
         <div className="items-center hover:text-stone-50 text-stone-400 flex space-x-4 hover:cursor-pointer"><h2 className="text-sm">Email</h2>
@@ -93,6 +92,10 @@ export default function VerticalHeader() {
          </li>
       </ul>
     </nav>
+    
+    <div className="flex justify-start">
+    <ModeToggle />
+    </div>
   </aside>
   )
 }

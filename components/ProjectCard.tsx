@@ -9,27 +9,53 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+
+interface ProjectCardProps {
+  title: string;
+  description: string;
+}
+
+ const projects = [
+  {
+    "id": 1,
+    "title": "1984",
+    "description": "Test",
+   
+  },
+  {"id": 2,
+    "title": "dewfefzxn",
+    "description": "Test",
+    
+  },
+  {
+    "id": 3,
+    "title": "dewfefzxn",
+    "description": "Test",
+    
+  },
+];
+
 export default function ProjectCard() {
   return (
-    <Card className="m-4">
-      <CardHeader className="p-4">
-        <CardTitle className="text-xl font-bold">Project Title</CardTitle>
-        <CardDescription className="text-sm text-gray-500">
-          A brief description of the project
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="p-4">
-        <img
-          alt="Project thumbnail"
-          className="mb-4"
-          height="200"
-          src="/placeholder.svg"
-          style={{
-            aspectRatio: "300/200",
-            objectFit: "cover",
-          }}
-          width="300"
-        />
+    <>
+    {projects.map((project) => (
+        <Card className="m-4">
+          <CardHeader className="p-4">
+             <CardTitle key={project.id} className="text-xl font-bold">{project.title}</CardTitle>
+            
+            <CardDescription className="text-sm text-gray-500">
+              {project.description}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="p-4">
+            <img
+              alt="Project thumbnail"
+              className="mb-4"
+              height="200"
+              src="/placeholder.svg"
+              style={{ aspectRatio: "300/200", objectFit: "cover" }}
+              width="300"
+            />
         <p className="text-sm">
           Detailed overview of the project, its objectives, the technologies
           used, and the results achieved.
@@ -53,5 +79,11 @@ export default function ProjectCard() {
         </a>
       </CardFooter>
     </Card>
-  );
+    ))}
+    </>
+  )
+  
 }
+
+
+

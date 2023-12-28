@@ -17,9 +17,7 @@ export default function Home() {
         <h3 className="text-center underline">My Latest Projects Below</h3>
       </div>
       <div>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard  />
       </div>
     </main>
   );

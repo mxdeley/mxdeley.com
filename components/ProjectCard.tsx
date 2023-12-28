@@ -39,7 +39,7 @@ export default function ProjectCard() {
   return (
     <>
     {projects.map((project) => (
-        <Card className="m-4">
+        <Card className="m-4" key={project.id}>
           <CardHeader className="p-4">
              <CardTitle key={project.id} className="text-xl font-bold">{project.title}</CardTitle>
             

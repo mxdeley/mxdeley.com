@@ -32,7 +32,9 @@ export default function VerticalHeader() {
   return (
     <aside className="w-72 h-screen border-r border-stone-50/30 px-6 py-8 fixed flex flex-col top-0 z-50">
     <header className="mb-8">
-        <Link href={"/"}>        <Image src={"/logo.png"} width={50} height={50} alt="Logo"/>
+        <Link href={"/"} className="flex items-center space-x-2">
+          <Image src={"https://pbs.twimg.com/profile_images/1683098188637519872/IC1Vn69p_400x400.jpg"} width={40} height={40} alt="Logo" className="rounded-full"/>
+          <h1 className="text-sm text-stone-400">@mxdeley</h1>
 </Link>
     </header>
     <nav className="h-full flex flex-col justify-center" >

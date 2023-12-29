@@ -93,8 +93,18 @@ export default function VerticalHeader() {
       </ul>
     </nav>
     
-    <div className="flex justify-start">
-    <ModeToggle />
+    <div className="flex justify-between items-center w-[120px] mx-auto">
+      <Link href={"https://read.cv/mxdeley"}>
+        <Image src={"/readcv.svg"} height={22} width={22} alt="readcv" className="transform transition duration-500 hover:scale-125"/>
+      </Link>
+    <Link href={"https://twitter.com/mxdeley"}>
+        <Image src={"/xcom.svg"} height={22} width={22} alt="xcom" className="transform transition duration-500 hover:scale-125" />
+    </Link>
+    <Link href={"https://bento.me/mxdeley"}>
+    <Image src={"/bento.svg"} height={22} width={22} alt="xcom" className="transform transition duration-500 hover:scale-125" />
+    </Link>
+    
+   
     </div>
   </aside>
   )

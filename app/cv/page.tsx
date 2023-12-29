@@ -32,6 +32,24 @@ export default function CV() {
             </Avatar>
             </div>
         </div>
+        <div className="flex justify-start w-full">
+            <div>
+                <h2 className="text-md font-bold">About</h2>
+                <p>I have over four years experience in </p>
+            </div>
+        </div>
+        <div className="flex justify-start w-full">
+            <div>
+                <h2 className="text-md font-bold">Work Experience</h2>
+                <p>I have over four years experience in </p>
+            </div>
+        </div>
+        <div className="flex justify-start w-full">
+            <div>
+                <h2 className="text-md font-bold">Education</h2>
+                <p>I have over four years experience in </p>
+            </div>
+        </div>
       </main>
     );
   }

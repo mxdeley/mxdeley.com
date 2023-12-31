@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 const Images = [
   { id: 1, path: "/header_1.png" },
@@ -57,12 +58,30 @@ export function HomepageCarousel() {
       </Carousel>
       <div className="space-y-2 font-light text-sm">
         <h2 className="max-w-3xl text-center">
-          I&apos;m mxdeley, a highly skilled engineer with expertise in both the
-          Tech and Construction Industries.
-        </h2>
-        <h2 className="max-w-2xl text-center">
-          I bring a multi-disciplinary approach to my work, ensuring innovative
-          solutions and outstanding results.
+          I&apos;m mxdeley, a multi disciplined{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Engineer"
+            className="font-bold"
+          >
+            engineer
+          </Link>{" "}
+          with expertise in both the{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Technology"
+            className="font-bold"
+          >
+            tech
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/construction"
+            className="font-bold"
+          >
+            construction
+          </Link>{" "}
+          industries. I bring a multi-disciplinary approach to my work, ensuring
+          innovative solutions and outstanding results. My goal is to merge the
+          tech and construction industries.
         </h2>
       </div>
     </>

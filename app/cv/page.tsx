@@ -1,5 +1,5 @@
 import { Avatar } from "@/components/ui/avatar";
-import { MapPinIcon } from "lucide-react";
+import { GithubIcon, MapPinIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -55,6 +55,12 @@ export default function CV() {
                   width={16}
                   alt="xcom"
                   className="transform transition duration-500 hover:scale-125"
+                />
+              </Link>
+              <Link href={"https://github.com/mxdeley"}>
+                <GithubIcon
+                  size={16}
+                  className="transform transition duration-500 hover:scale-125 text-stone-400"
                 />
               </Link>
             </div>

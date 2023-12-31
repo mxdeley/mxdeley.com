@@ -32,11 +32,9 @@ export default function VerticalHeader() {
     <>
       {isAsideVisible ? (
         <aside
-          className={`w-[12rem] h-screen border-r border-stone-50/30 px-4 py-8 fixed flex flex-col top-0 z-50 transition-transform duration-500 ${
-            isAsideVisible
-              ? "transform translate-x-0"
-              : "transform -translate-x-full"
-          }`}
+          className={`transform transition-transform duration-200 ${
+            isAsideVisible ? "translate-x-0" : "-translate-x-full"
+          } w-[12rem] h-screen border-r border-stone-50/30 px-4 py-8 fixed flex flex-col top-0 z-50`}
         >
           <header className="flex items-center justify-between">
             <Link href={"/"} className="flex items-center space-x-2">
@@ -145,7 +143,7 @@ export default function VerticalHeader() {
       ) : (
         <button
           className="z-50 absolute p-2"
-          onClick={() => setAsideVisible(true)}
+          onClick={() => setAsideVisible(!isAsideVisible)}
         >
           <MenuIcon className="text-stone-400 hover:text-stone-50" />
         </button>

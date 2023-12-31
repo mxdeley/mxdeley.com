@@ -37,10 +37,10 @@ export function HomepageCarousel() {
       >
         <CarouselContent className="flex items-center justify-center">
           {Images.map((image) => (
-            <CarouselItem key={image.id.toString()}>
+            <CarouselItem key={image.id}>
               <div>
                 <Card className="border-none rounded-none">
-                  <CardContent className="flex flex-col items-center justify-center">
+                  <CardContent className="flex items-center justify-center">
                     <Image
                       src={image.path}
                       width={960}

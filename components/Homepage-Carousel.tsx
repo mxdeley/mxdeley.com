@@ -34,7 +34,7 @@ export function HomepageCarousel() {
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
-        <CarouselContent className="flex items-center justify-center px-0">
+        <CarouselContent className="flex items-center justify-center px-0 py-0">
           {Images.map((image) => (
             <CarouselItem key={image.id.toString()}>
               <div>
@@ -43,7 +43,7 @@ export function HomepageCarousel() {
                     <Image
                       src={image.path}
                       width={1000}
-                      height={1000}
+                      height={500}
                       alt="headers"
                     />
                   </CardContent>

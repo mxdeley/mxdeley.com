@@ -35,7 +35,7 @@ export function HomepageCarousel() {
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
-        <CarouselContent className="flex items-center justify-center px-0 py-0">
+        <CarouselContent className="flex items-center justify-center">
           {Images.map((image) => (
             <CarouselItem key={image.id.toString()}>
               <div>
@@ -43,8 +43,8 @@ export function HomepageCarousel() {
                   <CardContent className="flex flex-col items-center justify-center">
                     <Image
                       src={image.path}
-                      width={1000}
-                      height={500}
+                      width={960}
+                      height={540}
                       alt="headers"
                     />
                   </CardContent>
@@ -56,32 +56,44 @@ export function HomepageCarousel() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <div className="space-y-2 font-light text-sm">
+      <div className="space-y-2 font-light text-sm text-stone-400">
         <h2 className="max-w-3xl text-center">
           I&apos;m mxdeley, a multi disciplined{" "}
           <Link
             href="https://en.wikipedia.org/wiki/Engineer"
-            className="font-bold"
+            className="font-bold text-stone-50"
           >
             engineer
           </Link>{" "}
           with expertise in both the{" "}
           <Link
             href="https://en.wikipedia.org/wiki/Technology"
-            className="font-bold"
+            className="font-bold text-stone-50"
           >
             tech
           </Link>{" "}
           and{" "}
           <Link
             href="https://en.wikipedia.org/wiki/construction"
-            className="font-bold"
+            className="font-bold text-stone-50"
           >
             construction
           </Link>{" "}
-          industries. I bring a multi-disciplinary approach to my work, ensuring
-          innovative solutions and outstanding results. My goal is to merge the
-          tech and construction industries.
+          industries. I bring a multi-disciplinary approach to my work, ensuring{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/innovation"
+            className="font-bold text-stone-50"
+          >
+            innovative
+          </Link>{" "}
+          solutions and outstanding results. My goal is to{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Wikipedia:Merging"
+            className="font-bold text-stone-50"
+          >
+            merge
+          </Link>{" "}
+          the tech and construction industries.
         </h2>
       </div>
     </>

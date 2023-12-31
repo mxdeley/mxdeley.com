@@ -2,12 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  KanbanSquare,
-  MailIcon,
-  PenSquareIcon,
-  ScrollTextIcon,
-} from "lucide-react";
+import { MailIcon, MenuIcon, ScrollTextIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import {
   Dialog,
@@ -37,13 +32,13 @@ export default function VerticalHeader() {
     <>
       {isAsideVisible ? (
         <aside
-          className={`w-[12rem] h-screen border-r border-stone-50/30 px-6 py-8 fixed flex flex-col top-0 z-50 transition-transform duration-500 ${
+          className={`w-[12rem] h-screen border-r border-stone-50/30 px-4 py-8 fixed flex flex-col top-0 z-50 transition-transform duration-500 ${
             isAsideVisible
               ? "transform translate-x-0"
               : "transform -translate-x-full"
           }`}
         >
-          <header className="mb-8">
+          <header className="flex items-center justify-between">
             <Link href={"/"} className="flex items-center space-x-2">
               <Image
                 src={
@@ -56,6 +51,12 @@ export default function VerticalHeader() {
               />
               <h1 className="text-sm text-stone-400">@mxdeley</h1>
             </Link>
+            <button
+              onClick={() => setAsideVisible(false)}
+              className="text-stone-400 hover:text-stone-50"
+            >
+              <XIcon size={16} />
+            </button>
           </header>
           <nav className="h-full flex flex-col justify-center">
             <ul className="flex flex-col justify-center space-y-16">
@@ -92,16 +93,7 @@ export default function VerticalHeader() {
                       </DialogDescription>
                     </DialogHeader>
                     <div className="flex items-center space-x-2">
-                      <div className="grid flex-1 gap-2">
-                        {/* <Label htmlFor="link" className="sr-only">
-            Link
-          </Label> */}
-                        {/* <Input
-            id="link"
-            defaultValue="https://ui.shadcn.com/docs/installation"
-            readOnly
-          /> */}
-                      </div>
+                      <div className="grid flex-1 gap-2"></div>
                       <Button type="submit" size="sm" className="px-3">
                         <span className="sr-only">Copy</span>
                         {/* <Copy className="h-4 w-4" /> */}
@@ -149,11 +141,13 @@ export default function VerticalHeader() {
               />
             </Link>
           </div>
-          <button onClick={() => setAsideVisible(false)}>Close</button>
         </aside>
       ) : (
-        <button className="z-50 absolute" onClick={() => setAsideVisible(true)}>
-          Open Aside
+        <button
+          className="z-50 absolute p-2"
+          onClick={() => setAsideVisible(true)}
+        >
+          <MenuIcon className="text-stone-400 hover:text-stone-50" />
         </button>
       )}
     </>

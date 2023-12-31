@@ -142,7 +142,7 @@ export default function VerticalHeader() {
         </aside>
       ) : (
         <button
-          className="z-50 absolute p-2"
+          className="z-50 p-2 fixed"
           onClick={() => setAsideVisible(!isAsideVisible)}
         >
           <MenuIcon className="text-stone-400 hover:text-stone-50" />

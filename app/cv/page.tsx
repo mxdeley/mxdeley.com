@@ -1,4 +1,3 @@
-import { Avatar } from "@/components/ui/avatar";
 import { GithubIcon, MapPinIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,7 +82,7 @@ export default function CV() {
           <h2 className="text-md font-bold text-stone-50">About</h2>
           <p>
             With more than four years of experience as a freelance web
-            developer, I've honed my skills at my own design studio{" "}
+            developer, I&apos;ve honed my skills at my own design studio{" "}
             <Link href="#" className="text-stone-50">
               madeleydesignstudio
             </Link>

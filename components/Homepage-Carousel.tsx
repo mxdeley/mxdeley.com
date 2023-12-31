@@ -27,32 +27,44 @@ export function HomepageCarousel() {
   );
 
   return (
-    <Carousel
-      plugins={[plugin.current]}
-      className="w-full max-w-xl"
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
-    >
-      <CarouselContent className="flex items-center justify-center p-0">
-        {Images.map((image) => (
-          <CarouselItem key={image.id.toString()}>
-            <div>
-              <Card className="border-none rounded-none">
-                <CardContent className="flex items-center justify-center">
-                  <Image
-                    src={image.path}
-                    width={1500}
-                    height={1500}
-                    alt="headers"
-                  />
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <>
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full max-w-2xl h-fit"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent className="flex items-center justify-center px-0">
+          {Images.map((image) => (
+            <CarouselItem key={image.id.toString()}>
+              <div>
+                <Card className="border-none rounded-none">
+                  <CardContent className="flex flex-col items-center justify-center">
+                    <Image
+                      src={image.path}
+                      width={1000}
+                      height={1000}
+                      alt="headers"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className="space-y-2 font-light text-sm">
+        <h2 className="max-w-3xl text-center">
+          I&apos;m mxdeley, a highly skilled engineer with expertise in both the
+          Tech and Construction Industries.
+        </h2>
+        <h2 className="max-w-2xl text-center">
+          I bring a multi-disciplinary approach to my work, ensuring innovative
+          solutions and outstanding results.
+        </h2>
+      </div>
+    </>
   );
 }

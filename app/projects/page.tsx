@@ -1,9 +1,14 @@
+import Projects from "@/components/Projects";
 
-
-export default function Projects() {
+export default function Project() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <h1>name: Daniel Madeley</h1>
+    <main>
+      <Projects
+        title="Project Title"
+        category="Project Category"
+        description="Project Description"
+        image="path/to/image.jpg"
+      />
     </main>
   );
 }

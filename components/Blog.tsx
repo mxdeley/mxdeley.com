@@ -14,16 +14,16 @@ export default function Blog() {
               Technology
             </Button>
             <Button className="font-semibold" variant="link">
-              Nature
+              Marketing
             </Button>
             <Button className="font-semibold" variant="link">
-              Travel
+              Software
             </Button>
             <Button className="font-semibold" variant="link">
-              Sports
+              Structures
             </Button>
             <Button className="font-semibold" variant="link">
-              Lifestyle
+              Life Hacks
             </Button>
           </div>
         </aside>

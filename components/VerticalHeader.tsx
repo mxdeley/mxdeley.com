@@ -3,12 +3,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
+  BookIcon,
+  BookOpenIcon,
   FolderDotIcon,
   FolderOpenDotIcon,
   LibraryIcon,
   MailIcon,
   MenuIcon,
   PenSquareIcon,
+  PencilIcon,
+  PencilLineIcon,
   ScrollIcon,
   ScrollTextIcon,
   XIcon,
@@ -46,15 +50,15 @@ const NavLinks = [
     id: 3,
     name: "Blog",
     path: "/blog",
-    iconclosed: <PenSquareIcon size={20} />,
-    icon: <PenSquareIcon size={20} />,
+    iconclosed: <PencilIcon size={20} />,
+    icon: <PencilLineIcon size={20} />,
   },
   {
     id: 4,
     name: "Resources",
     path: "/resources",
-    iconclosed: <LibraryIcon size={20} />,
-    icon: <LibraryIcon size={20} />,
+    iconclosed: <BookIcon size={20} />,
+    icon: <BookOpenIcon size={20} />,
   },
 ];
 

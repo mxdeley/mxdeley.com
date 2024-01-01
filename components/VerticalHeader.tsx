@@ -7,6 +7,7 @@ import {
   BookOpenIcon,
   FolderDotIcon,
   FolderOpenDotIcon,
+  GithubIcon,
   LibraryIcon,
   MailIcon,
   MenuIcon,
@@ -149,7 +150,7 @@ export default function VerticalHeader() {
             </ul>
           </nav>
 
-          <div className="flex justify-between items-center w-[100px] mx-auto">
+          <div className="flex justify-between items-center w-[140px] mx-auto">
             <Link href={"https://read.cv/mxdeley"}>
               <Image
                 src={"/readcv.svg"}
@@ -175,6 +176,12 @@ export default function VerticalHeader() {
                 width={22}
                 alt="xcom"
                 className="transform transition duration-500 hover:scale-125"
+              />
+            </Link>
+            <Link href={"https://github.com/mxdeley"}>
+              <GithubIcon
+                size={22}
+                className="transform transition duration-500 hover:scale-125 text-stone-400"
               />
             </Link>
           </div>

@@ -95,6 +95,11 @@ export function HomepageCarousel() {
         </Link>{" "}
         the tech and construction industries.
       </p>
+
+      <p className="text-xs text-stone-400 italic mt-6">
+        (Be aware site is still very much under construction but has purposely
+        been published with non working and incomplete components.)
+      </p>
     </>
   );
 }

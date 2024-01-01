@@ -24,11 +24,39 @@ const Images = [
 
 export function HomepageCarousel() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true, loop: true })
   );
 
   return (
     <>
+      <div className="space-y-2 font-light text-sm text-stone-400  mb-5">
+        <h2 className="max-w-3xl text-center">
+          I&apos;m mxdeley, a multi disciplined engineer with expertise in both
+          the{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Technology"
+            className="font-bold text-stone-50"
+          >
+            tech
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/construction"
+            className="font-bold text-stone-50"
+          >
+            construction
+          </Link>{" "}
+          industries.
+          {/* I bring a multi-disciplinary approach to my work, ensuring{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/innovation"
+            className="font-bold text-stone-50"
+          >
+            innovative
+          </Link>{" "}
+          solutions and outstanding results. */}
+        </h2>
+      </div>
       <Carousel
         plugins={[plugin.current]}
         className="w-full max-w-2xl h-fit"
@@ -56,46 +84,17 @@ export function HomepageCarousel() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
-      <div className="space-y-2 font-light text-sm text-stone-400">
-        <h2 className="max-w-3xl text-center">
-          I&apos;m mxdeley, a multi disciplined{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/Engineer"
-            className="font-bold text-stone-50"
-          >
-            engineer
-          </Link>{" "}
-          with expertise in both the{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/Technology"
-            className="font-bold text-stone-50"
-          >
-            tech
-          </Link>{" "}
-          and{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/construction"
-            className="font-bold text-stone-50"
-          >
-            construction
-          </Link>{" "}
-          industries. I bring a multi-disciplinary approach to my work, ensuring{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/innovation"
-            className="font-bold text-stone-50"
-          >
-            innovative
-          </Link>{" "}
-          solutions and outstanding results. My goal is to{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/Wikipedia:Merging"
-            className="font-bold text-stone-50"
-          >
-            merge
-          </Link>{" "}
-          the tech and construction industries.
-        </h2>
-      </div>
+
+      <p className="text-sm text-stone-400">
+        My goal is to{" "}
+        <Link
+          href="https://en.wikipedia.org/wiki/Wikipedia:Merging"
+          className="font-bold text-stone-50"
+        >
+          merge
+        </Link>{" "}
+        the tech and construction industries.
+      </p>
     </>
   );
 }

@@ -2,7 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MailIcon, MenuIcon, ScrollTextIcon, XIcon } from "lucide-react";
+import {
+  FolderDotIcon,
+  FolderOpenDotIcon,
+  LibraryIcon,
+  MailIcon,
+  MenuIcon,
+  PenSquareIcon,
+  ScrollIcon,
+  ScrollTextIcon,
+  XIcon,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import {
   Dialog,
@@ -18,9 +28,34 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 
 const NavLinks = [
-  { id: 1, name: "CV", path: "/cv" },
-  { id: 2, name: "Projects", path: "/projects" },
-  { id: 3, name: "Blog", path: "/blog" },
+  {
+    id: 1,
+    name: "CV",
+    path: "/cv",
+    iconclosed: <ScrollIcon size={20} />,
+    icon: <ScrollTextIcon size={20} />,
+  },
+  {
+    id: 2,
+    name: "Projects",
+    path: "/projects",
+    iconclosed: <FolderDotIcon size={20} />,
+    icon: <FolderOpenDotIcon size={20} />,
+  },
+  {
+    id: 3,
+    name: "Blog",
+    path: "/blog",
+    iconclosed: <PenSquareIcon size={20} />,
+    icon: <PenSquareIcon size={20} />,
+  },
+  {
+    id: 4,
+    name: "Resources",
+    path: "/resources",
+    iconclosed: <LibraryIcon size={20} />,
+    icon: <LibraryIcon size={20} />,
+  },
 ];
 
 export default function VerticalHeader() {
@@ -70,7 +105,7 @@ export default function VerticalHeader() {
                       }
                     >
                       <h2 className="text-sm">{link.name}</h2>
-                      <ScrollTextIcon size={20} />
+                      {isActive(link.path) ? link.icon : link.iconclosed}
                     </Link>
                   </li>
                 );

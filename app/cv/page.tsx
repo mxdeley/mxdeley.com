@@ -87,7 +87,7 @@ export default function CV() {
               madeleydesignstudio
             </Link>
             . You can find my preferred tech stack{" "}
-            <Link href="#" className="text-stone-50">
+            <Link href="./resources/tech_stack" className="text-stone-50">
               here
             </Link>
             . Additionally, I hold a BEng in civil engineering and have spent

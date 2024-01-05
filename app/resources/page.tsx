@@ -1,3 +1,4 @@
+import { ResourceCarousel } from "@/components/Resource-Carousel";
 import { ResourceCard } from "@/components/ResourceCard";
 
 export default function Resources() {
@@ -10,6 +11,7 @@ export default function Resources() {
         </h2>
         <p>(Greyscale items are currently not used in my daily stack)</p>
       </div>
+      <ResourceCarousel />
 
       <ResourceCard />
     </main>

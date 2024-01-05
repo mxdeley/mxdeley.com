@@ -14,7 +14,12 @@ export default function Blog() {
           experiences gained from building projects, as well as my expert
           opinions on industry advancements.
         </p>
-        <Image src={"/blog_image.png"} width={960} height={540} />
+        <Image
+          src={"/blog_image.png"}
+          width={960}
+          height={540}
+          alt="Blog Image"
+        />
       </div>
       <aside className="sticky top-0 flex gap-4 items-start">
         <div className="flex ">

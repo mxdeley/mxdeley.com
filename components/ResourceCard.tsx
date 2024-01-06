@@ -8,7 +8,7 @@ const Resources = [
   { id: 1, href: "/resources/web_tech_stack", title: "Web Stack" },
   { id: 1, href: "/resources/python_libraries", title: "Python Libraries" },
   { id: 3, href: "/resources/productivity_stack", title: "Productivity Stack" },
-  { id: 4, href: "#", title: "Other" },
+  { id: 4, href: "#", title: "Books" },
 ];
 
 export const ResourceCard = () => {

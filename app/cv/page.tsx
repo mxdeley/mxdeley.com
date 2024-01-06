@@ -171,12 +171,25 @@ export default function CV() {
       <div className="flex justify-start w-full">
         <div>
           <h2 className="text-lg font-bold">Education</h2>
-          <h3>Leeds Beckett</h3>
-          <h4 className="text-stone-400">2019-2022</h4>
-          <p className="text-stone-400">
-            I achieved a 2:1 in civil engineering. Trained as an amateur MMA
-            fighter.
-          </p>
+          <div>
+            <h3>Leeds Beckett</h3>
+            <h4 className="text-stone-400">2019-2022</h4>
+            <p className="text-stone-400">
+              I achieved a 2:1 in civil engineering.
+            </p>
+            <h5>Courses</h5>
+            <p>Material Science</p>
+            <p>Structural Analysis (Advanced)</p>
+            <p>Thermodynamics</p>
+          </div>
+          <div>
+            <h3>Self-Taught Programmer</h3>
+            <h4 className="text-stone-400">2019-Onwards</h4>
+            <h5>Courses</h5>
+            <p>Boot.dev</p>
+            <p>Papareact</p>
+            <p>Codeacademy</p>
+          </div>
         </div>
       </div>
       <div>

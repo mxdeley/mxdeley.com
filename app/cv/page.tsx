@@ -196,10 +196,8 @@ export default function CV() {
         <p className="text-stone-400 text-sm">
           Explore my insightful{" "}
           <Link href="#" className="text-stone-50">
-            blogs
-          </Link>{" "}
-          for enlightening perspectives, compelling future aspirations, and
-          captivating memoirs from the past.
+            blogs.
+          </Link>
         </p>
       </div>
     </main>

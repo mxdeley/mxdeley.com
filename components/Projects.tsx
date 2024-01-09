@@ -212,7 +212,7 @@ export default function Projects({
       <div className="container w-full mx-auto px-4 md:px-6 gap-10 items-start">
         <section className="grid grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <Card key={index}>
+            <Card key={index} className="bg-stone-950">
               <CardHeader className="flex items-center justify-between">
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <Badge className="text-xs" variant="outline">

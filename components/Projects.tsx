@@ -207,12 +207,12 @@ export default function Projects({
               </CardHeader>
               <CardContent>
                 <div className="relative group">
-                  <img
+                  <Image
                     alt="Cover image"
                     className="rounded-lg object-cover w-full aspect-square group-hover:opacity-50 transition-opacity"
-                    height="200"
+                    height={200}
                     src={project.image}
-                    width="200"
+                    width={200}
                   />
                   <p className="text-gray-500 mt-2">{project.description}</p>
                   <Link className="text-blue-500 hover:underline" href="#">

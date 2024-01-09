@@ -214,8 +214,10 @@ export default function Projects({
           {projects.map((project, index) => (
             <Card key={index} className="bg-stone-950">
               <CardHeader className="flex items-center justify-between">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <Badge className="text-xs" variant="outline">
+                <h3 className="text-xl font-bold text-stone-50">
+                  {project.title}
+                </h3>
+                <Badge className="text-xs text-stone-400" variant="outline">
                   {project.category}
                 </Badge>
               </CardHeader>

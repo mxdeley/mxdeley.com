@@ -81,8 +81,8 @@ export function HomepageCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="bg-stone-950" />
+        <CarouselNext className="bg-stone-950" />
       </Carousel>
 
       <p className="text-sm text-stone-400">

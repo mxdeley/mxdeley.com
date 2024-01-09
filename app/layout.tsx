@@ -20,14 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("dark:bg-stone-950", inter.className)}>
+      <body className={cn("bg-stone-950", inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <VerticalHeader/>
+          <VerticalHeader />
           {children}
         </ThemeProvider>
       </body>

@@ -224,7 +224,15 @@ export default function Projects({
           ))}
         </section>
       </div>
-      <PaginationComponent />
+      <PaginationComponent
+        totalItems={projects.length}
+        itemsPerPage={3}
+        currentPage={1} // This should be managed in your state
+        onPageChange={(page) => {
+          // Update your state here to reflect the current page
+          console.log(page);
+        }}
+      />
     </main>
   );
 }

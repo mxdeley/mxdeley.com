@@ -24,13 +24,15 @@ export const PaginationComponent: React.FC<PaginationComponentProps> = ({
 }) => {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-  const handlePrevious = () => {
+  const handlePrevious = (event: React.MouseEvent) => {
+    event.preventDefault();
     if (currentPage > 1) {
       onPageChange(currentPage - 1);
     }
   };
 
-  const handleNext = () => {
+  const handleNext = (event: React.MouseEvent) => {
+    event.preventDefault();
     if (currentPage < totalPages) {
       onPageChange(currentPage + 1);
     }
@@ -46,7 +48,10 @@ export const PaginationComponent: React.FC<PaginationComponentProps> = ({
           <PaginationItem key={page}>
             <PaginationLink
               href="#"
-              onClick={() => onPageChange(page)}
+              onClick={(event) => {
+                event.preventDefault();
+                onPageChange(page);
+              }}
               isActive={page === currentPage}
             >
               {page}

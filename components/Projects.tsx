@@ -117,6 +117,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PaginationComponent } from "./Pagination";
 import { useState, useEffect } from "react";
+import allProjects from "@/content/projects/projects.json";
 
 interface AllProjects {
   title: string;
@@ -133,23 +134,6 @@ export default function Projects({
 }: AllProjects) {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [projects, setProjects] = useState<AllProjects[]>([]);
-
-  const allProjects = [
-    {
-      title: "The Future of Technology",
-      category: "Software",
-      description:
-        "An insight into what the future holds for technology, from AI to quantum computing.",
-      image: "/placeholder.svg",
-    },
-    {
-      title: "The Beauty of Nature",
-      category: "Structures",
-      description:
-        "Explore the stunning beauty of mother nature and her astonishing creations.",
-      image: "/placeholder.svg",
-    },
-  ];
 
   useEffect(() => {
     if (selectedCategory === "All") {

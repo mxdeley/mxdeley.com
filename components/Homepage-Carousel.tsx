@@ -67,7 +67,7 @@ export function HomepageCarousel() {
           {Images.map((image) => (
             <CarouselItem key={image.id}>
               <div>
-                <Card className="border-none rounded-none">
+                <Card className="border-none rounded-none bg-stone-950">
                   <CardContent className="flex items-center justify-center">
                     <Image
                       src={image.path}

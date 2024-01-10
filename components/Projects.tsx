@@ -215,7 +215,10 @@ export default function Projects({
                     width={200}
                   />
                   <p className="text-gray-500 mt-2">{project.description}</p>
-                  <Link className="text-blue-500 hover:underline" href="#">
+                  <Link
+                    className="text-blue-500 hover:underline"
+                    href={`/projects/${project.title}`}
+                  >
                     Read more
                   </Link>
                 </div>

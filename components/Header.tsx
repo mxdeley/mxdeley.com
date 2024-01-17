@@ -1,4 +1,3 @@
-import { ModeToggle } from "@/components/Theme-Toggle";
 import Link from "next/link";
 const Header = () => {
   return (
@@ -14,7 +13,6 @@ const Header = () => {
           <Link href={"/projects"}>Projects</Link>
           <Link href={"/blog"}>Blog</Link>
         </ul>
-        <ModeToggle />
       </div>
     </div>
   );

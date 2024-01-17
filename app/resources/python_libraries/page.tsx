@@ -9,6 +9,12 @@ export default function PythonLibraries() {
       <h2>Scrapy / BeautifulSoup</h2>
       <h2>SciPy</h2>
       <h2>TensorFlow</h2>
+      <h2>Pipenv</h2>
+      <h2>Plotly</h2>
+      <h2>Seaborn</h2>
+      <h2>Flask</h2>
+      <h2>Fast API</h2>
+      <h2>Django</h2>
     </main>
   );
 }

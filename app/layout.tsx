@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import VerticalHeader from "@/components/VerticalHeader";
 
@@ -21,15 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-stone-950", inter.className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <VerticalHeader />
-          {children}
-        </ThemeProvider>
+        <VerticalHeader />
+        {children}
       </body>
     </html>
   );

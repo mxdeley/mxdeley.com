@@ -5,8 +5,13 @@ import DotPattern from "@/components/magicui/dot-pattern";
 import Link from "next/link";
 
 const Resources = [
-  { id: 1, href: "/resources/web_tech_stack", title: "Web Stack" },
+  { id: 1, href: "/resources/web_tech_stack", title: "Web Development Stack" },
   { id: 1, href: "/resources/python_libraries", title: "Python Libraries" },
+  {
+    id: 1,
+    href: "/resources/structural_engineering",
+    title: "Structural Engineering Stack",
+  },
   { id: 3, href: "/resources/productivity_stack", title: "Productivity Stack" },
 ];
 

@@ -71,14 +71,34 @@ const NavLinks = [
 ];
 
 export default function VerticalHeader() {
-  // const [isAsideVisible, setAsideVisible] = useState(false);
+  const [isAsideVisible, setAsideVisible] = useState(false);
+  const [showMenuIcon, setShowMenuIcon] = useState(true);
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
 
+  const handleOpenAside = () => {
+    setAsideVisible(true);
+    setShowMenuIcon(false);
+  };
+
+  const handleCloseAside = () => {
+    setAsideVisible(false);
+    setTimeout(() => {
+      setShowMenuIcon(true);
+    }, 700); // match this with the transition duration
+  };
+
   return (
     <>
+      {showMenuIcon && !isAsideVisible && (
+        <button onClick={handleOpenAside} className="fixed p-2">
+          <MenuIcon size={24} className="text-stone-50" />
+        </button>
+      )}
       <aside
-        className={`transform transition-transform duration-200  w-[12rem] h-screen border-r border-stone-50/30 px-4 py-8 fixed flex flex-col top-0 z-50`}
+        className={`transform transition-transform duration-700 w-[12rem] h-screen border-r border-stone-50/30 px-4 py-8 fixed flex flex-col top-0 z-50 ${
+          isAsideVisible ? "" : "translate-x-[-300px]"
+        }`}
       >
         <header className="flex items-center justify-between">
           <Link href={"/"} className="flex items-center space-x-2">
@@ -93,6 +113,10 @@ export default function VerticalHeader() {
             />
             <h1 className="text-sm text-stone-400">@mxdeley</h1>
           </Link>
+
+          <button onClick={handleCloseAside}>
+            <XIcon size={16} className="text-stone-50" />
+          </button>
         </header>
         <nav className="h-full flex flex-col justify-center">
           <ul className="flex flex-col justify-center space-y-16">

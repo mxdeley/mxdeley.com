@@ -12,6 +12,17 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useStore } from "@/lib/store";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { Button } from "./ui/button";
 
 const HorizontalHeader = () => {
   const isExpanded = useStore((state) => state.isExpanded);
@@ -31,7 +42,7 @@ const HorizontalHeader = () => {
       }, 300);
       setTimeout(() => {
         setShowIcons([true, true, true]);
-      }, 450);
+      }, 400);
     } else {
       setShowIcons([false, false, false]);
     }
@@ -63,9 +74,49 @@ const HorizontalHeader = () => {
           </Link>
         )}
         <MenuIcon size={28} onClick={handleClick} className="cursor-pointer" />
-        {showIcons[0] && <BookIcon size={28} />}
-        {showIcons[1] && <ScrollIcon size={28} />}
-        {showIcons[2] && <MailIcon size={28} />}
+        {showIcons[0] && (
+          <Link href={"/resources"}>
+            <BookIcon size={28} />
+          </Link>
+        )}
+        {showIcons[1] && (
+          <Link href={"/cv"}>
+            <ScrollIcon size={28} />
+          </Link>
+        )}
+        {showIcons[2] && (
+          <li className="flex justify-end">
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="items-center hover:text-stone-50 text-stone-400 flex hover:cursor-pointer">
+                  <MailIcon size={28} />
+                </div>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-zinc-900 text-zinc-50">
+                <DialogHeader>
+                  <DialogTitle>Share link</DialogTitle>
+                  <DialogDescription>
+                    Anyone who has this link will be able to view this.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex items-center space-x-2">
+                  <div className="grid flex-1 gap-2"></div>
+                  <Button type="submit" size="sm" className="px-3">
+                    <span className="sr-only">Copy</span>
+                    {/* <Copy className="h-4 w-4" /> */}
+                  </Button>
+                </div>
+                <DialogFooter className="sm:justify-start">
+                  <DialogClose asChild>
+                    <Button type="button" variant="secondary">
+                      Close
+                    </Button>
+                  </DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </li>
+        )}
       </div>
     </div>
   );

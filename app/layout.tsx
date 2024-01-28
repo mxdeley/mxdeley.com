@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 import VerticalHeader from "@/components/VerticalHeader";
+import HorizontalHeader from "@/components/HorizontalHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-stone-950", inter.className)}>
-        <VerticalHeader />
+        {/* <VerticalHeader /> */}
+        <HorizontalHeader />
         {children}
       </body>
     </html>

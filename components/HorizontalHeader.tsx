@@ -24,11 +24,16 @@ import {
 } from "./ui/dialog";
 import { Button } from "./ui/button";
 
+import { usePathname } from "next/navigation";
+
 const HorizontalHeader = () => {
   const isExpanded = useStore((state) => state.isExpanded);
   const toggle = useStore((state) => state.toggle);
   //   const [isExpanded, setIsExpanded] = useState(false);
   const [showIcons, setShowIcons] = useState([false, false, false]);
+  const pathname = usePathname();
+
+  const isActive = (path: string) => path === pathname;
 
   const handleClick = () => {
     toggle();
@@ -60,28 +65,63 @@ const HorizontalHeader = () => {
       >
         {showIcons[2] && (
           <Link href={"/"}>
-            <HomeIcon size={28} />
+            <HomeIcon
+              size={28}
+              className={
+                isActive("/")
+                  ? "items-center hover:text-stone-50 text-stone-50"
+                  : "items-center hover:text-stone-50  text-stone-400"
+              }
+            />
           </Link>
         )}
         {showIcons[1] && (
           <Link href={"/projects"}>
-            <FolderDotIcon size={28} />
+            <FolderDotIcon
+              size={28}
+              className={
+                isActive("/projects")
+                  ? "items-center hover:text-stone-50 text-stone-50"
+                  : "items-center hover:text-stone-50  text-stone-400"
+              }
+            />
           </Link>
         )}
         {showIcons[0] && (
           <Link href={"/blog"}>
-            <PencilIcon size={28} />
+            <PencilIcon
+              size={28}
+              className={
+                isActive("/blog")
+                  ? "items-center hover:text-stone-50 text-stone-50"
+                  : "items-center hover:text-stone-50  text-stone-400"
+              }
+            />
           </Link>
         )}
         <MenuIcon size={28} onClick={handleClick} className="cursor-pointer" />
         {showIcons[0] && (
           <Link href={"/resources"}>
-            <BookIcon size={28} />
+            <BookIcon
+              size={28}
+              className={
+                isActive("/resources")
+                  ? "items-center hover:text-stone-50 text-stone-50"
+                  : "items-center hover:text-stone-50  text-stone-400"
+              }
+            />
           </Link>
         )}
         {showIcons[1] && (
           <Link href={"/cv"}>
-            <ScrollIcon size={28} />
+            <ScrollIcon
+              size={28}
+              className={
+                isActive("/cv")
+                  ? "items-center hover:text-stone-50 text-stone-50"
+                  : "items-center hover:text-stone-50  text-stone-400"
+              }
+            />
           </Link>
         )}
         {showIcons[2] && (

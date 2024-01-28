@@ -11,7 +11,7 @@ export default function Resources() {
         </h2>
         <p>(Greyscale items are currently not used in my daily stack)</p>
       </div>
-      <ResourceCarousel />
+      {/* <ResourceCarousel /> */}
 
       <ResourceCard />
     </main>

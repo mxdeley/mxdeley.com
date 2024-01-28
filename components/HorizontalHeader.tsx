@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import {
   BookIcon,
   FolderDotIcon,
+  HomeIcon,
   MailIcon,
   MenuIcon,
-  MonitorOffIcon,
   PencilIcon,
   ScrollIcon,
 } from "lucide-react";
@@ -60,7 +60,7 @@ const HorizontalHeader = () => {
       >
         {showIcons[2] && (
           <Link href={"/"}>
-            <MonitorOffIcon size={28} />
+            <HomeIcon size={28} />
           </Link>
         )}
         {showIcons[1] && (

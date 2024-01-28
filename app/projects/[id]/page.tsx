@@ -1,21 +1,32 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import data from "../../../content/projects/projects.json";
+import Image from "next/image";
 
-const Project = () => {
-  const [data, setData] = useState(null);
+interface ProjectData {
+  id: number;
+  title: string;
+  image: string;
+}
+
+const Project: React.FC = () => {
+  const [jsonData, setJsonData] = useState<ProjectData[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await import("@/content/projects/projects.json");
-    };
-
-    fetchData();
+    setJsonData(data);
   }, []);
 
-  console.log(data);
-
-  return <div>Project</div>;
+  return (
+    <div className="text-white">
+      {jsonData.map((item: ProjectData) => (
+        <React.Fragment key={item.id}>
+          <div>{item.title}</div>
+          <Image src={item.image} height={200} width={200} alt="" />
+        </React.Fragment>
+      ))}
+    </div>
+  );
 };
 
 export default Project;

@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ik.imagekit.io",
       },
+      {
+        protocol: "https",
+        hostname: "s3.eu-west-2.amazonaws.com",
+      },
     ],
   },
 };

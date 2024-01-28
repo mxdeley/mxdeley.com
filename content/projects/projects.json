@@ -1,11 +1,13 @@
 [
   {
+    "id": 1,
     "title": "Paddle Steamer, Cardiff",
     "category": "Structures",
-    "description": "An insight into what the future holds for technology, from AI to quantum computing.",
-    "image": "/placeholder.svg"
+    "description": "An five storey residential building.",
+    "image": "https://s3.eu-west-2.amazonaws.com/nation.cymru/wp-content/uploads/2022/02/03185306/paddle-steamer-flats.jpg"
   },
   {
+    "id": 2,
     "title": "Plumstead, West Thamesmead",
     "category": "Structures",
     "description": "Explore the stunning beauty of mother nature and her astonishing creations.",

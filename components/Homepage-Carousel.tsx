@@ -15,11 +15,26 @@ import {
 import Link from "next/link";
 
 const Images = [
-  { id: 1, path: "/header_1.png" },
-  { id: 2, path: "/header_2.png" },
-  { id: 3, path: "/header_3.png" },
-  { id: 4, path: "/header_4.png" },
-  { id: 5, path: "/header_5.png" },
+  {
+    id: 1,
+    path: "https://ik.imagekit.io/mxdeley/header_1.png?updatedAt=1706442158195",
+  },
+  {
+    id: 2,
+    path: "https://ik.imagekit.io/mxdeley/header_2.png?updatedAt=1706442145966",
+  },
+  {
+    id: 3,
+    path: "https://ik.imagekit.io/mxdeley/header_3.png?updatedAt=1706442122515",
+  },
+  {
+    id: 4,
+    path: "https://ik.imagekit.io/mxdeley/header_4.png?updatedAt=1706442169273",
+  },
+  {
+    id: 5,
+    path: "https://ik.imagekit.io/mxdeley/header_5.png?updatedAt=1706442133896",
+  },
 ];
 
 export function HomepageCarousel() {
@@ -47,14 +62,6 @@ export function HomepageCarousel() {
             construction
           </Link>{" "}
           industries.
-          {/* I bring a multi-disciplinary approach to my work, ensuring{" "}
-          <Link
-            href="https://en.wikipedia.org/wiki/innovation"
-            className="font-bold text-stone-50"
-          >
-            innovative
-          </Link>{" "}
-          solutions and outstanding results. */}
         </h2>
       </div>
       <Carousel
@@ -81,8 +88,14 @@ export function HomepageCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious
+          variant={"outline"}
+          className="bg-transparent text-zinc-400 hover:bg-transparent hover:text-zinc-50 border-none"
+        />
+        <CarouselNext
+          variant={"outline"}
+          className="bg-transparent text-zinc-400 hover:bg-transparent hover:text-zinc-50 border-none"
+        />
       </Carousel>
 
       <p className="text-sm text-stone-400">
